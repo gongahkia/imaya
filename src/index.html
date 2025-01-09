@@ -1,54 +1,93 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>今や (Imaya)</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>今や (Imaya) - Welcome</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .whirlpool {
+            width: 300px;
+            height: 300px;
+            background: conic-gradient(from 0deg, #3498db, #2980b9, #3498db);
+            border-radius: 50%;
+            animation: swirl 5s ease-in-out forwards;
+        }
+
+        .title {
+            position: absolute;
+            font-size: 48px;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 4s forwards;
+        }
+
+        @keyframes swirl {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            80% {
+                transform: rotate(1080deg) scale(0.1);
+            }
+            100% {
+                transform: rotate(1080deg) scale(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-out {
+            animation: fadeOut 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-
-        <h1>今や<span class="english">(Imaya)</span></h1>
-
-        <div class="credits">Made by <a href="https://github.com/gongahkia">@gongahkia</a></div>
-
-        <div class="order-selector">
-            <select id="order-select">
-                <option value="frog">🐸 カエルを食べる <span class="english">(Eat That Frog)</span></option>
-                <option value="summit">🗻 頂上に登る <span class="english">(Climb The Summit)</span></option>
-                <option value="burn">🏃🏼 スロー バーン <span class="english">(Slow Burn)</span></option>
-            </select>
-        </div>
-
-        <div class="pools">
-            <div class="pool" id="small-pool">
-                <h3>💧 小さい <span class="english">(Small)</span></h3>
-                <input type="text" id="small-task" placeholder="小さいタスク">
-            </div>
-            <div class="pool" id="medium-pool">
-                <h3>🏞️ 中くらい <span class="english">(Medium)</span></h3>
-                <input type="text" id="medium-task" placeholder="中くらいのタスク">
-            </div>
-            <div class="pool" id="large-pool">
-                <h3>🌊 大きい <span class="english">(Large)</span></h3>
-                <input type="text" id="large-task" placeholder="大きいタスク">
-            </div>
-        </div>
-
-        <button id="save-tasks">タスクを保存 <span class="english">(Save Tasks)</span></button>
-
-        <div class="log">
-            <h2>本日のログ <span class="english">(Today's Log)</span></h2>
-            <div id="daily-log" class="grid"></div>
-        </div>
-
-        <br>
-
-        <button id="view-weekly-log">週間ログを見る <span class="english">(View Weekly Log)</span></button>
-
+    <div class="container" id="container">
+        <div class="whirlpool"></div>
+        <div class="title">imaya</div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('container').addEventListener('click', function() {
+            this.classList.add('fade-out');
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

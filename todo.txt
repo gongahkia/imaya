@@ -33,7 +33,7 @@
 
 (B) Add a CSS-animated homepage that plays as an overlay before the main Imaya landing page appears @feature
 (B) Debug the existing broken site in HTML, CSS and JS first @feature
-(B) Add a console log statement to see hwo things are being saved @feature
+(B) Add a console log statement to see how things are being saved in browser cache and to actively tweak how things will be displayed and dealt with as data @feature
 (B) Add option to reorder tasks, add option to delete tasks, fix how tasks are being displayed, fix how tasks are being renderd, allow editing of existing tasks, add task descriptions as well so clicking into them opens the task pop-up @feature
 (B) Debug broken weekly task log display @feature
 (B) Leach on a minimalist, possibly monochrome (to fit the nothing and light phone) aesthetic @feature
