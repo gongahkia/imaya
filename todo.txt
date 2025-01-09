@@ -26,7 +26,7 @@
         🏃🏼 Slow Burn is perfect for slow-starters to the day: SMALL --> MEDIUM --> LARGE 
     Templates with pre-populated pool flows
         RECOMMENDED way to use Imaya --> ☀️ Daily stints - Plan your morning, afternoon and evening with 3 pools each = 9 tasks total 
-        NOT RECOMMENDED --> 📅 Weekly tasks - Plan your full week with 5 or 7 pools = 21 tasks total
+        NOT RECOMMENDED --> 📅 Weekly tasks - Plan your full week with 5 or 7 pools = 21 tasks total and only viewable as a pop-up
 (A) Intended user flow would be at the start of the day, users are able to define their POOLS for that day @idea
 (A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @ideaq
 (A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
@@ -83,6 +83,7 @@
 (F) Remove todo.txt from the git commits and add it to .gitignore @admin
 (F) Can reference the flow state in the README.md @admin
 (F) Add this as a reference research article https://www.reddit.com/r/ProductivityApps/comments/1hs5e9a/upgrade_task_management_in_2025/ @idea
+(F) Add detailed usage instructions to the README.md @admin
 
 (G) Actually deploy the app to the Google Play Store via Google Play Console https://play.google.com/console before the 60 day deadline is up @deploy
 
