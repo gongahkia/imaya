@@ -1,33 +1,35 @@
 (A) Desired app features @idea
-    Plan Your Day where each bento box limits you to 3 tasks, one large, one medium and one small, to help reduce task overwhelm and maximise achievement.
-        ‍‍🥗 SMALL for an easy win - this could be an administrative task or personal wellbeing time.
+    Analogy of Pools with different sized tasks, Stream (SMALL tasks), River (MEDIUM tasks), Ocean (LARGE tasks)
+        Stream represents small tasks (gentle, manageable)
+        River for medium tasks (steady flow)
+        Ocean for large tasks (deep focus)
+    Plan Your Day where each Pool limits you to 3 tasks, one large, one medium and one small, to help reduce task overwhelm and maximise achievement
+    Types of POOLS
+        ‍💧 SMALL for an easy win - this could be an administrative task or personal wellbeing time.
             Focus: Light, habitual 
             Timings: 15-30 minutes
             Context: Administrative or wellbeing
             Example: Clear emails, yoga session, file documents
-        ‍‍🍚 MEDIUM for tasks with a medium level of energy and focus, but not all your attention.
+        🏞️ MEDIUM for tasks with a medium level of energy and focus, but not all your attention.
             Focus: Balanced, analytical
             Timings: 45-60 minutes
             Context: Project-orientated, incoming, process-based
             Example: Email campaign, schedule social media, finish presentation 
-        🍣 LARGE for tasks with a need for deep focus — that means as little distraction as possible including meetings.
+        🌊 LARGE for tasks with a need for deep focus — that means as little distraction as possible including meetings.
             Focus: Creative, intense
             Timings: 90+ minutes
             Context: Deliverable-oriented
             Example: Write report, edit video, project deliverable 
-    Task orders 
-        🐸 Eat That Frog is taken from the classic productivity book of the same name by Brian Tracey - with this workflow, you focus on your most important task first (🍣 large) move onto (🍚 medium) and finishing with your (🥗 small).
-        🗻 Climb The Summit is a balanced approach to your day. You begin your day with a medium-energy task, (🍚 medium) moving to the biggest task (🍣 large) and finishing with your (🥗 small) task.
-        🏃🏼 Slow Burn is perfect for slow-starters to the day. You begin with your smallest task (🥗 small), and then move onto a more demanding task (🍚 medium), gradually working your way towards (🍣 large) - great for afternoons.
-    Templates with pre-populated bento boxes 
-    Planning with Bento 
-        RECOMMENDED way to use bento --> ☀️ Daily stints - Plan your morning, afternoon and evening with 3 boxes each = 9 tasks total 
-        📅 Weekly tasks - Plan your full week with 5 or 7 boxes = 21 tasks total
-(A) Intended user flow would be at the start of the day, users are able to define their BENTO for that day @ideaq
-(A) Users aren't able to specify their bento the day before or for the next day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @idea
+    Pool orders 
+        🐸 Eat That Frog is taken from the classic productivity book of the same name by Brian Tracey: LARGE --> MEDIUM --> SMALL
+        🗻 Climb The Summit is a balanced approach to your day: MEDIUM --> LARGE --> SMALL 
+        🏃🏼 Slow Burn is perfect for slow-starters to the day: SMALL --> MEDIUM --> LARGE 
+    Templates with pre-populated pool flows
+        RECOMMENDED way to use Imaya --> ☀️ Daily stints - Plan your morning, afternoon and evening with 3 pools each = 9 tasks total 
+        NOT RECOMMENDED --> 📅 Weekly tasks - Plan your full week with 5 or 7 pools = 21 tasks total
+(A) Intended user flow would be at the start of the day, users are able to define their POOLS for that day @idea
+(A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @ideaq
 (A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
-
-(B) But find a DIFFERENT and BETTER ANALOGY then bento sets so I don't get copyright claimed @idea
 
 (B) Consider making a rough mockup of Imaya in HTML, CSS and JS first, ask V0 for help implementing 
 (B) Possible frameworks / languages to look into for developing Imaya @idea @dev
@@ -43,7 +45,6 @@
 
 --- APP IDEAS ---
 
-(B) Make an app that is meant to be used daily and leaches on the concept of bento task management such as this https://www.reddit.com/r/ProductivityApps/comments/1hs5e9a/upgrade_task_management_in_2025/ @idea
 
 (C) Leach on a minimalist, possibly monochrome (to fit the nothing and light phone) aesthetic @feature
 (C) Use JAPANESE CHARACTERS for most things and labels with English option to cater to the weaboo demographic  @feature
@@ -80,6 +81,8 @@
     Q: There's too many rules here. How do I start?
     A: Bento is quite simple, really. The goal is to work with 3 tasks. We've only recommended and prescribed best practices in the method - so adapt these to best fit your needs.
 (F) Remove todo.txt from the git commits and add it to .gitignore @admin
+(F) Can reference the flow state in the README.md @admin
+(F) Add this as a reference research article https://www.reddit.com/r/ProductivityApps/comments/1hs5e9a/upgrade_task_management_in_2025/ @idea
 
 (G) Actually deploy the app to the Google Play Store via Google Play Console https://play.google.com/console before the 60 day deadline is up @deploy
 
