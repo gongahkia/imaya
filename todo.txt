@@ -31,6 +31,10 @@
 (A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @ideaq
 (A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
 
+(B) Leach on a minimalist, possibly monochrome (to fit the nothing and light phone) aesthetic @feature
+(B) Use JAPANESE CHARACTERS for most things and labels with English option to cater to the weaboo demographic  @feature
+(B) Focus on having a chill app that runs properly and quickly with SMOOTH transitions  @feature
+
 (B) Consider making a rough mockup of Imaya in HTML, CSS and JS first, ask V0 for help implementing 
 (B) Possible frameworks / languages to look into for developing Imaya @idea @dev
     * React Native
@@ -45,10 +49,6 @@
 
 --- APP IDEAS ---
 
-
-(C) Leach on a minimalist, possibly monochrome (to fit the nothing and light phone) aesthetic @feature
-(C) Use JAPANESE CHARACTERS for most things and labels with English option to cater to the weaboo demographic  @feature
-(C) Focus on having a chill app that runs properly and quickly with SMOOTH transitions  @feature
 (C) Add time tracking with forest-like features with minimalist style  @feature
 (C) Consider an all-in-one productivity app that has first-class LOCAL storage @feature
 (C) After app is up, implement secondary syncing storage with Google Drive and allow users to alternatively specify their own file server via FTP  @feature
