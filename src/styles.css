@@ -39,16 +39,6 @@ h1, h2 {
     transition: all 0.3s ease;
 }
 
-.pool:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.pool h3 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-
 input[type="text"] {
     width: 100%;
     padding: 0.5rem;
@@ -73,6 +63,21 @@ button:hover {
     background-color: #555;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.grid div {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
 .order-selector {
     margin-bottom: 1rem;
     text-align: center;
@@ -84,25 +89,36 @@ button:hover {
     border-radius: 3px;
 }
 
-.log {
-    margin-top: 2rem;
+.pool:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.log-data {
+    transition: all 0.3s ease;
+}
+
+.log-data:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.credits {
     text-align: center;
+    margin: 1rem;
+    font-size: 0.95rem;
+    color: #888;
+    font-style: italic;
+    text-decoration: none;
 }
 
-.log h2 {
-    margin-bottom: 0.5rem;
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.log ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.log li {
-    margin-bottom: 0.5rem;
-}
-
-.english {
-    font-size: 0.8em;
-    color: #777;
+a:hover {
+    color: #555;
+    text-decoration: underline;
 }

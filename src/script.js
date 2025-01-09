@@ -3,48 +3,34 @@ const mediumTask = document.getElementById('medium-task');
 const largeTask = document.getElementById('large-task');
 const saveButton = document.getElementById('save-tasks');
 const orderSelect = document.getElementById('order-select');
-const weeklyLog = document.getElementById('weekly-log');
+const dailyLog = document.getElementById('daily-log');
+const viewWeeklyLogButton = document.getElementById('view-weekly-log');
 
+const MAX_TASKS = 9;
 
 function saveTasks() {
-    /**
-     saves the current tasks to local storage with the current date 
-     and order and ensures that only the last 7 days' tasks are kept 
-     in storage, updating the weekly log display and clearing the 
-     input fields after saving
-    **/
     const date = new Date().toLocaleDateString('ja-JP');
-    const tasks = {
-        small: smallTask.value,
-        medium: mediumTask.value,
-        large: largeTask.value,
-        order: orderSelect.value,
-        date: date
-    };
+    const taskText = `${date}: ${smallTask.value || mediumTask.value || largeTask.value} (${getOrderEmoji(orderSelect.value)})`;
 
-    let weekLog = JSON.parse(localStorage.getItem('weekLog')) || [];
-    weekLog.push(tasks);
-    if (weekLog.length > 7) {
-        weekLog = weekLog.slice(-7);
+    let dayLog = JSON.parse(localStorage.getItem('dailyLog')) || [];
+    if (dayLog.length < MAX_TASKS) {
+        dayLog.push(taskText);
+        localStorage.setItem('dailyLog', JSON.stringify(dayLog));
+        updateDailyLog();
+        clearInputs();
+    } else {
+        alert('タスクの最大数に達しました！ (Maximum number of tasks reached!)');
     }
-    localStorage.setItem('weekLog', JSON.stringify(weekLog));
-
-    updateWeeklyLog();
-    clearInputs();
 }
 
-function updateWeeklyLog() {
-    /**
-     updates the weekly log element with the tasks stored in localStorage, 
-    retrieving the last 7 days' tasks and formats them as list items, 
-    displaying each task's date, description, and the order represented by an emoji
-    **/
-    const weekLog = JSON.parse(localStorage.getItem('weekLog')) || [];
-    weeklyLog.innerHTML = '';
-    weekLog.forEach(day => {
-        const li = document.createElement('li');
-        li.textContent = `${day.date}: ${day.small}, ${day.medium}, ${day.large} (${getOrderEmoji(day.order)})`;
-        weeklyLog.appendChild(li);
+function updateDailyLog() {
+    const dayLog = JSON.parse(localStorage.getItem('dailyLog')) || [];
+    dailyLog.innerHTML = '';
+    dayLog.forEach(task => {
+        const div = document.createElement('div');
+        div.textContent = task;
+        div.classList.add('log-data'); 
+        dailyLog.appendChild(div);
     });
 }
 
@@ -63,6 +49,26 @@ function clearInputs() {
     largeTask.value = '';
 }
 
-saveButton.addEventListener('click', saveTasks);
+function viewWeeklyLog() {
+    const weekLog = JSON.parse(localStorage.getItem('weekLog')) || [];
+    if (weekLog.length === 0) {
+        alert('週間ログは空です。 (Weekly log is empty.)');
+        return;
+    }
+    const formattedLog = weekLog.map(entry => {
+        const date = entry.date || '日付不明 (Unknown Date)';
+        const tasks = [
+            entry.small ? `小さい: ${entry.small}` : '',
+            entry.medium ? `中くらい: ${entry.medium}` : '',
+            entry.large ? `大きい: ${entry.large}` : ''
+        ].filter(Boolean).join(', ');
+        const order = entry.order ? `順序: ${getOrderEmoji(entry.order)}` : '';
+        return `${date}: ${tasks} (${order})`;
+    }).join('\n');
+    alert(`週間ログ:\n${formattedLog}`);
+}
 
-updateWeeklyLog();
+saveButton.addEventListener('click', saveTasks);
+viewWeeklyLogButton.addEventListener('click', viewWeeklyLog);
+
+updateDailyLog();
