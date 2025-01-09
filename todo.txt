@@ -31,7 +31,11 @@
 (A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @ideaq
 (A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
 
+(B) Add a CSS-animated homepage that plays as an overlay before the main Imaya landing page appears @feature
 (B) Debug the existing broken site in HTML, CSS and JS first @feature
+(B) Add a console log statement to see hwo things are being saved @feature
+(B) Add option to reorder tasks, add option to delete tasks, fix how tasks are being displayed, fix how tasks are being renderd, allow editing of existing tasks, add task descriptions as well so clicking into them opens the task pop-up @feature
+(B) Debug broken weekly task log display @feature
 (B) Leach on a minimalist, possibly monochrome (to fit the nothing and light phone) aesthetic @feature
 (B) Use JAPANESE CHARACTERS for most things and labels with English option to cater to the weaboo demographic  @feature
 (B) Focus on having a chill app that runs properly and quickly with SMOOTH transitions  @feature
