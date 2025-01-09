@@ -1,0 +1,101 @@
+(A) Desired app features @idea
+    Plan Your Day where each bento box limits you to 3 tasks, one large, one medium and one small, to help reduce task overwhelm and maximise achievement.
+        ‍‍🥗 SMALL for an easy win - this could be an administrative task or personal wellbeing time.
+            Focus: Light, habitual 
+            Timings: 15-30 minutes
+            Context: Administrative or wellbeing
+            Example: Clear emails, yoga session, file documents
+        ‍‍🍚 MEDIUM for tasks with a medium level of energy and focus, but not all your attention.
+            Focus: Balanced, analytical
+            Timings: 45-60 minutes
+            Context: Project-orientated, incoming, process-based
+            Example: Email campaign, schedule social media, finish presentation 
+        🍣 LARGE for tasks with a need for deep focus — that means as little distraction as possible including meetings.
+            Focus: Creative, intense
+            Timings: 90+ minutes
+            Context: Deliverable-oriented
+            Example: Write report, edit video, project deliverable 
+    Task orders 
+        🐸 Eat That Frog is taken from the classic productivity book of the same name by Brian Tracey - with this workflow, you focus on your most important task first (🍣 large) move onto (🍚 medium) and finishing with your (🥗 small).
+        🗻 Climb The Summit is a balanced approach to your day. You begin your day with a medium-energy task, (🍚 medium) moving to the biggest task (🍣 large) and finishing with your (🥗 small) task.
+        🏃🏼 Slow Burn is perfect for slow-starters to the day. You begin with your smallest task (🥗 small), and then move onto a more demanding task (🍚 medium), gradually working your way towards (🍣 large) - great for afternoons.
+    Templates with pre-populated bento boxes 
+    Planning with Bento 
+        RECOMMENDED way to use bento --> ☀️ Daily stints - Plan your morning, afternoon and evening with 3 boxes each = 9 tasks total 
+        📅 Weekly tasks - Plan your full week with 5 or 7 boxes = 21 tasks total
+(A) Intended user flow would be at the start of the day, users are able to define their BENTO for that day @ideaq
+(A) Users aren't able to specify their bento the day before or for the next day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @idea
+(A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
+
+(B) But find a DIFFERENT and BETTER ANALOGY then bento sets so I don't get copyright claimed @idea
+
+(B) Consider making a rough mockup of Imaya in HTML, CSS and JS first, ask V0 for help implementing 
+(B) Possible frameworks / languages to look into for developing Imaya @idea @dev
+    * React Native
+    * Ionic
+    * Xamarin
+    * Adobe Phonegap Cordova
+    * Nativescript
+    * Kotlin
+    * Flutter (Dart)
+    * C#
+    * Swift
+
+--- APP IDEAS ---
+
+(B) Make an app that is meant to be used daily and leaches on the concept of bento task management such as this https://www.reddit.com/r/ProductivityApps/comments/1hs5e9a/upgrade_task_management_in_2025/ @idea
+
+(C) Leach on a minimalist, possibly monochrome (to fit the nothing and light phone) aesthetic @feature
+(C) Use JAPANESE CHARACTERS for most things and labels with English option to cater to the weaboo demographic  @feature
+(C) Focus on having a chill app that runs properly and quickly with SMOOTH transitions  @feature
+(C) Add time tracking with forest-like features with minimalist style  @feature
+(C) Consider an all-in-one productivity app that has first-class LOCAL storage @feature
+(C) After app is up, implement secondary syncing storage with Google Drive and allow users to alternatively specify their own file server via FTP  @feature
+(C) Consider making an app that integrates with my existing productivity workflow and has an area to record stationary usage and fountain pens and pocket notebooks @feature
+(C) Consider making it a single HUB app that branches and links to all apps that i want to use similar to Android OS launcher apps, allowing users to specify their own launch configuration, see https://www.thelightphone.com/ light phone's UI  @feature
+
+(D) Add a tutorial screen as a seperate overlay that says "<App name> respects you as an individual and treats you like an adult. It will not hold your hand. We as the developers hope it will help you become the best version of yourself you can be." @feature
+(D) Add a detailed tutorial of all possible features and the generic expected user flow. @feature
+
+(E) Be intentional about and add any and all relevant UNIT TESTS to allow for the application to be heavily unit tested before going out into production @test
+(E) See industry standards for CI/CD pipelines for android apps and implement and run them @test
+
+(F) Fill out the README.md with more details @admin
+(F) Add mermaid diagrams of 1. ARCHITECTURE, 2. EXPECTED USER FLOW, 3. Any additional relevant diagrams that need to be added @admin
+(F) Specify the app is open-source but under protected license  @admin
+(F) Add additional legal disclaimers to absolve myself of any liability @admin
+(F) See whether I'm able to add automated badges to the README.md that update the CI/CD status of the application at all times @admin
+(F) Specify in the README.md how many days I took to deploy the app and include images of the date of my first commit and the date of my last commit @admin
+(F) Draw a nice app logo on ipad @admin
+(F) Draw a nice app logo for the repo @admin
+(F) Specify the references from the base of this todo.txt to the README as well @admin
+(F) Add this explanation of the name imaya (now) to the README.md and can specify the difference between 今や and 今, while 今 refers to the present moment or the current situation and is very general and widely used in various contexts, 今や (imaya) highlights a change or contrast between the past and the present, often with an emphasis on the current state and is used to emphasize the transformation or significance of the present compared to the past and reflects a shift from a previous condition to what is happening now, often with an emotional or impactful tone ++ justification for why I named it imaya @admin
+(F) Add the below FAQ under #FAQ to the README.md but rephrase the questions and answers so I don't get caught by turnitin @admin
+    Q: Shall I ditch my to-do list?
+    A: No. Bento is a companion app. We assist your to-do list. Imagine Bento as your daily priority list allowing you to narrow down your backlog, using a system and method for best practice. 
+    Q: What if I complete my core 3 tasks?
+    A: Great! Super work. The goal of Bento is to help you feel accomplished with your day. Each time you complete a Bento box, you'll learn about your limits and what best fits the time, so if you notice yourself completing boxes often, feel free to increase the density or intensity of the task inside them for better results.
+    Q: I've been emailed an urgent task? How can I embed urgent work?
+    A: This is a common issue. We open our email midday and there it is, an urgent 45-minute task to work on. Now, we'd recommend leaving your 🍚 medium task empty if you're someone that gets lots of incoming workload - allow your medium task to be the home for this task, without the stress of unplanned workloads. 
+    Q: There's too many rules here. How do I start?
+    A: Bento is quite simple, really. The goal is to work with 3 tasks. We've only recommended and prescribed best practices in the method - so adapt these to best fit your needs.
+(F) Remove todo.txt from the git commits and add it to .gitignore @admin
+
+(G) Actually deploy the app to the Google Play Store via Google Play Console https://play.google.com/console before the 60 day deadline is up @deploy
+
+(H) Make a post about the app on Linkedin and put Kotlin as a programming language I can use on my resume @publicity
+
+(I) If the app is good enough then figure out if i want to port it over to iphone and code it out entirely in Swift @future
+(I) If the app is good enough then figure out if i want to port it over to desktop and code it out entirely in C# or see what languages exist @future
+
+--- REFERENCES ---
+
+Visual and navigation reference simplicity-wise
+MOODA https://apps.apple.com/us/app/mooda/id6449689589
+MOODIE https://apps.apple.com/us/app/moodie-mood-diary-with-lock/id1640383777
+SMILE TO DO https://apps.apple.com/us/app/smile-todo-time-management/id1551532207
+MUJI WATER BOTTLE https://www.muji.com/sg/products/cmdty/detail/4550182930801
+
+Articles
+https://medium.com/@jindal.ankit89/just-9-tasks-per-day-can-change-your-life-forever-1bbceb220d91
+https://www.reddit.com/r/productivity/comments/1gd0kpk/how_many_tasks_do_you_handle_in_a_day/
