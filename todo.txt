@@ -41,6 +41,7 @@ x (B) Consider making a rough mockup of Imaya in HTML, CSS and JS first, ask V0 
 (B) Leach on a minimalist, possibly monochrome (to fit the nothing and light phone) aesthetic @feature
 (B) Focus on having a chill app that runs properly and quickly with SMOOTH transitions  @feature
 (B) Refine the CSS-animated homepage that plays as an overlay before the main Imaya landing page appears @feature
+(B) Consider adding a seperate HTML page that shows up to view the user' weekly logs, so there is more space for the existing today's logs + can leverage on localStorage as an option @feature
 
 (B) When done debugging site and implementing all desired features, migrate to mobile using Ionic @feature
 (B) Possible frameworks / languages to look into for developing Imaya @idea @dev
