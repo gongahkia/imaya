@@ -27,13 +27,14 @@ x (B) Consider making a rough mockup of Imaya in HTML, CSS and JS first, ask V0 
         🐸 Eat That Frog is taken from the classic productivity book of the same name by Brian Tracey: LARGE --> MEDIUM --> SMALL
         🗻 Climb The Summit is a balanced approach to your day: MEDIUM --> LARGE --> SMALL 
         🏃🏼 Slow Burn is perfect for slow-starters to the day: SMALL --> MEDIUM --> LARGE 
-    Templates with pre-populated pool flows
-        RECOMMENDED way to use Imaya --> ☀️ Daily stints - Plan your morning, afternoon and evening with 3 pools each = 9 tasks total 
-        NOT RECOMMENDED --> 📅 Weekly tasks - Plan your full week with 5 or 7 pools = 21 tasks total and only viewable as a pop-up
+    Recommended way to use Imaya is to plan each day on the day itself @ the start of that day ++ to live presently Imaya clears the weekly log at the end of the week so that you always start on a fresh slate
 (A) Intended user flow would be at the start of the day, users are able to define their POOLS for that day @idea
-(A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @ideaq
+(A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @idea
 (A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
 
+(B) Might be an unnecessary feature but give the user a custom-cursor if they want @feature
+(B) Give the user key-binds within the browser like option-space / alt-space that open an overlay similar to Microsoft powetoys, that will then search within the weekly log whch is stored within browser cache @feature
+(B) Ensure that the weekly log is stored till the end of the week (defined as Saturday) and every Sunday the weekly log resets to avoid exceeding browser cache @feature
 (B) Add a japanese-language option of each page so there is home-jp.html and index-jp.html, plus buttons that transition to those as required @feature
 (B) Debug broken weekly task log display @feature
 (B) Add option to reorder tasks by dragging and dropping, add option to delete tasks, fix how tasks are being displayed, fix how tasks are being renderd, allow editing of existing tasks, add task descriptions as well so clicking into them opens the task pop-up @feature
