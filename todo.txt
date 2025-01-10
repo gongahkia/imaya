@@ -34,6 +34,7 @@ x (B) Consider making a rough mockup of Imaya in HTML, CSS and JS first, ask V0 
 (A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @ideaq
 (A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
 
+(B) Add a japanese-language option of each page so there is home-jp.html and index-jp.html, plus buttons that transition to those as required @feature
 (B) Debug broken weekly task log display @feature
 (B) Add option to reorder tasks by dragging and dropping, add option to delete tasks, fix how tasks are being displayed, fix how tasks are being renderd, allow editing of existing tasks, add task descriptions as well so clicking into them opens the task pop-up @feature
 (B) Debug the existing broken site in HTML, CSS and JS first @feature
@@ -42,6 +43,7 @@ x (B) Consider making a rough mockup of Imaya in HTML, CSS and JS first, ask V0 
 (B) Focus on having a chill app that runs properly and quickly with SMOOTH transitions  @feature
 (B) Refine the CSS-animated homepage that plays as an overlay before the main Imaya landing page appears @feature
 (B) Consider adding a seperate HTML page that shows up to view the user' weekly logs, so there is more space for the existing today's logs + can leverage on localStorage as an option @feature
+(B) Ensure that the Japanese translations on all the *-jp.html pages are accurate and correct @feature
 
 (B) When done debugging site and implementing all desired features, migrate to mobile using Ionic @feature
 (B) Possible frameworks / languages to look into for developing Imaya @idea @dev
