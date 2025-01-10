@@ -4,35 +4,59 @@ const largeTask = document.getElementById('large-task');
 const saveButton = document.getElementById('save-tasks');
 const orderSelect = document.getElementById('order-select');
 const dailyLog = document.getElementById('daily-log');
+const weeklyLog = document.getElementById('weekly-log');
 const viewWeeklyLogButton = document.getElementById('view-weekly-log');
 
 const MAX_TASKS = 9;
 
 function saveTasks() {
 
-    const date = new Date().toLocaleDateString('ja-JP');
+    const tasks = [smallTask.value.trim(), mediumTask.value.trim(), largeTask.value.trim()];
+    const count = tasks.filter(Boolean).length;
+    console.log(count);
 
-    // add code here to serialise saved data to a proper JSON format instead of a string
-    // then add a deserialisation function from below
+    if (count > 1){
 
-    const taskData = {
-        date: date,
-        flowType: orderSelect.value,
-        taskType: smallTask.value ? 'smallTask' : mediumTask.value ? 'mediumTask' : 'largeTask',
-        taskValue: smallTask.value || mediumTask.value || largeTask.value,
-    }
+        alert('タスクは一つにしてください！ (Please enter only one task!)');
+        return null;
 
-    let dayLog = JSON.parse(localStorage.getItem('dailyLog')) || [];
+    } else if (count == 0){
 
-    console.log(dayLog);
-
-    if (dayLog.length < MAX_TASKS) {
-        dayLog.push(taskData);
-        localStorage.setItem('dailyLog', JSON.stringify(dayLog));
-        updateDailyLog();
+        alert('タスクを入力してください！ (Please enter a task!)');
         clearInputs();
+        return null;
+
     } else {
-        alert('タスクの最大数に達しました！ (Maximum number of tasks reached!)');
+
+        const date = new Date().toLocaleDateString('ja-JP');
+
+        const taskData = {
+            date: date,
+            flowType: orderSelect.value,
+            taskType: smallTask.value ? 'smallTask' : mediumTask.value ? 'mediumTask' : 'largeTask',
+            taskValue: smallTask.value.trim() || mediumTask.value.trim() || largeTask.value.trim(),
+        }
+
+        let dayLog = JSON.parse(localStorage.getItem('dailyLog')) || [];
+        let weeklyLog = JSON.parse(localStorage.getItem('weekLog')) || [];
+
+        console.log(dayLog);
+
+        if (dayLog.length < MAX_TASKS) {
+
+            dayLog.push(taskData);
+            weeklyLog.push(taskData);
+            localStorage.setItem('dailyLog', JSON.stringify(dayLog));
+            localStorage.setItem('weekLog', JSON.stringify(weeklyLog));
+            updateDailyLog();
+            clearInputs();
+
+        } else {
+
+            alert('タスクの最大数に達しました！ (Maximum number of tasks reached!)');
+
+        }
+
     }
 
 }
@@ -99,23 +123,42 @@ function viewWeeklyLog() {
 
     const weekLog = JSON.parse(localStorage.getItem('weekLog')) || [];
 
-    console.log(weekLog);
+    // console.log(weekLog);
 
     if (weekLog.length === 0) {
         alert('週間ログは空です。 (Weekly log is empty.)');
         return;
+    } else if (weekLog.length >= MAX_TASKS * 7){
+        alert('週間ログは最大7日分しか保存されません。 (Weekly log is limited to 7 days.)');
+    } else {
+        alert(`${weekLog.length} items in the weekly log.`)
     }
-    const formattedLog = weekLog.map(entry => {
-        const date = entry.date || '日付不明 (Unknown Date)';
-        const tasks = [
-            entry.small ? `小さい: ${entry.small}` : '',
-            entry.medium ? `中くらい: ${entry.medium}` : '',
-            entry.large ? `大きい: ${entry.large}` : ''
-        ].filter(Boolean).join(', ');
-        const order = entry.order ? `順序: ${getEmoji(entry.order)}` : '';
-        return `${date}: ${tasks} (${order})`;
-    }).join('\n');
-    alert(`週間ログ:\n${formattedLog}`);
+
+    const groupedData = {};
+    weekLog.forEach(item => {
+        const { date } = item;
+        if (!groupedData[date]) {
+            groupedData[date] = [];
+        }
+        groupedData[date].push(item);
+    });
+
+    // console.log(groupedData);
+
+    weeklyLog.innerHTML = "";
+
+    for (const date in groupedData) {
+        const dateHeader = document.createElement('h2');
+        dateHeader.textContent = date;
+        weeklyLog.appendChild(dateHeader);
+        for (const item of groupedData[date]) {
+            const div = document.createElement('div');
+            formattedText = `${item.date}: ${getEmoji(item.order)} ${item.taskType}: ${item.taskValue}`;
+            div.textContent = formattedText;
+            div.classList.add('log-data');
+            weeklyLog.appendChild(div);
+        }
+    }
 }
 
 saveButton.addEventListener('click', saveTasks);
