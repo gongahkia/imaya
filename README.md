@@ -4,7 +4,7 @@
 
 今や.
 
-![](./asset/status.gif)
+![](./asset/logo/status.gif)
 
 > TODO consider adding table of contents here
 
