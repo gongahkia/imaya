@@ -34,6 +34,7 @@
 (B) Ensure that the weekly log is stored till the end of the week (defined as Saturday) and every Sunday the weekly log resets to avoid exceeding browser cache @feature
 (B) Fix the broken emojis display @feature
 (B) Debug broken weekly task log display @feature
+(B) Consider implementing the dynamic dragging and dropping of tasks that tangibly and actively changes the JSON structure of tasks with the HTML drag and drop API @feature
 (B) Add option to reorder tasks by dragging and dropping, add option to delete tasks, fix how tasks are being displayed, fix how tasks are being renderd, allow editing of existing tasks, add task descriptions as well so clicking into them opens the task pop-up @feature
 (B) Debug the existing broken site in HTML, CSS and JS first @feature
 (B) Add a console log statement to see how things are being saved in browser cache and to actively tweak how things will be displayed and dealt with as data @feature
