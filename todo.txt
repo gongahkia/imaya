@@ -82,16 +82,6 @@
 (F) Draw a nice app logo on ipad @admin
 (F) Draw a nice app logo for the repo @admin
 (F) Specify the references from the base of this todo.txt to the README as well @admin
-(F) Add this explanation of the name imaya (now) to the README.md and can specify the difference between 今や and 今, while 今 refers to the present moment or the current situation and is very general and widely used in various contexts, 今や (imaya) highlights a change or contrast between the past and the present, often with an emphasis on the current state and is used to emphasize the transformation or significance of the present compared to the past and reflects a shift from a previous condition to what is happening now, often with an emotional or impactful tone ++ justification for why I named it imaya @admin
-(F) Add the below FAQ under #FAQ to the README.md but rephrase the questions and answers so I don't get caught by turnitin @admin
-    Q: Shall I ditch my to-do list?
-    A: No. Bento is a companion app. We assist your to-do list. Imagine Bento as your daily priority list allowing you to narrow down your backlog, using a system and method for best practice. 
-    Q: What if I complete my core 3 tasks?
-    A: Great! Super work. The goal of Bento is to help you feel accomplished with your day. Each time you complete a Bento box, you'll learn about your limits and what best fits the time, so if you notice yourself completing boxes often, feel free to increase the density or intensity of the task inside them for better results.
-    Q: I've been emailed an urgent task? How can I embed urgent work?
-    A: This is a common issue. We open our email midday and there it is, an urgent 45-minute task to work on. Now, we'd recommend leaving your 🍚 medium task empty if you're someone that gets lots of incoming workload - allow your medium task to be the home for this task, without the stress of unplanned workloads. 
-    Q: There's too many rules here. How do I start?
-    A: Bento is quite simple, really. The goal is to work with 3 tasks. We've only recommended and prescribed best practices in the method - so adapt these to best fit your needs.
 (F) Remove todo.txt from the git commits and add it to .gitignore @admin
 (F) Can reference the flow state in the README.md @admin
 (F) Add this as a reference research article https://www.reddit.com/r/ProductivityApps/comments/1hs5e9a/upgrade_task_management_in_2025/ @idea

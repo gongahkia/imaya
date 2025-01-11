@@ -37,6 +37,18 @@
 * 進む *(susumu*) meaning move on
 * 現在 *(genzai)* meaning present
 
+### Is [Imaya](https://github.com/gongahkia/imaya) meant to replace my to-do list app?
+
+* No. Imaya is a companion app meant to assist your to-do list. Think of Imaya as a daily priority list that enables you to narrow down your to-do list backlog.
+
+### I regularly have sudden urgent tasks that need my attention. How can I embed urgent work?
+
+* We recommend leaving your medium task empty if you experience regular, sudden waves of incoming workload. 
+
+### What do I do after I've completed my core 3 tasks?
+
+* Wahoo! Good work. Imaya's goal is to help you feel accomplished with your day. Each time you complete a task pool, you'll learn about your limits and what best fits your workflow, so if you notice yourself completing pools often, feel free to increase the density of the task inside them for better results.
+
 </details>
 
 ## Reference
