@@ -6,6 +6,8 @@
 
 ![](./asset/logo/status.gif)
 
+What will you do today?
+
 > TODO consider adding table of contents here
 
 ## Rationale
