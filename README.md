@@ -20,8 +20,7 @@ What will you do 今や?
 
 > TODO add details here
 
-<details>
-    <summary> <h2>FAQ</h2></summary>
+## FAQ
 
 ### What other names were being considered aside from [Imaya](https://github.com/gongahkia/imaya)?
 
@@ -44,8 +43,6 @@ What will you do 今や?
 ### What do I do after I've completed my core 3 tasks?
 
 * Wahoo! Good work. Imaya's goal is to help you feel accomplished with your day. Each time you complete a task pool, you'll learn about your limits and what best fits your workflow, so if you notice yourself completing pools often, feel free to increase the density of the task inside them for better results.
-
-</details>
 
 ## Reference
 
