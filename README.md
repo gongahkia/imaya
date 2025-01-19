@@ -12,7 +12,7 @@ What will you do 今や?
 
 [I am my own greatest enemy](https://i.imgflip.com/3fahyh.png) when it comes to using [task management apps](https://www.reddit.com/r/productivity/comments/1au1uzj/whats_considered_the_best_app_for_taskproject/).  
 
-More than once, I have found myself [anxious](https://www.reddit.com/r/ADHD_Programmers/comments/xa7hll/do_any_of_you_feel_overwhelmed_by_productivity/) after opening that day's to-do list], just to discover [46 things](https://preview.redd.it/a604rad7j4651.png?auto=webp&s=63112b65e516d3e19dcbd05489d09967a2d73dce) scheduled for completion.  
+More than once, I have found myself [anxious](https://www.reddit.com/r/ADHD_Programmers/comments/xa7hll/do_any_of_you_feel_overwhelmed_by_productivity/) after opening that day's to-do list, just to discover [46 things](https://preview.redd.it/a604rad7j4651.png?auto=webp&s=63112b65e516d3e19dcbd05489d09967a2d73dce) scheduled for completion.  
 
 *(Just to be clear, this is not in any way the fault of those apps. This is mostly a result of poor time management.)*
 
