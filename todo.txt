@@ -1,30 +1,4 @@
-(A) Desired app features @idea
-    Analogy of Pools with different sized tasks, Stream (SMALL tasks), River (MEDIUM tasks), Ocean (LARGE tasks)
-        Stream represents small tasks (gentle, manageable)
-        River for medium tasks (steady flow)
-        Ocean for large tasks (deep focus)
-    Plan Your Day where each Pool limits you to 3 tasks, one large, one medium and one small, to help reduce task overwhelm and maximise achievement
-    Types of POOLS
-        ‍💧 SMALL for an easy win - this could be an administrative task or personal wellbeing time.
-            Focus: Light, habitual 
-            Timings: 15-30 minutes
-            Context: Administrative or wellbeing
-            Example: Clear emails, yoga session, file documents
-        🏞️ MEDIUM for tasks with a medium level of energy and focus, but not all your attention.
-            Focus: Balanced, analytical
-            Timings: 45-60 minutes
-            Context: Project-orientated, incoming, process-based
-            Example: Email campaign, schedule social media, finish presentation 
-        🌊 LARGE for tasks with a need for deep focus — that means as little distraction as possible including meetings.
-            Focus: Creative, intense
-            Timings: 90+ minutes
-            Context: Deliverable-oriented
-            Example: Write report, edit video, project deliverable 
-    Pool orders 
-        🐸 Eat That Frog is taken from the classic productivity book of the same name by Brian Tracey: LARGE --> MEDIUM --> SMALL
-        🗻 Climb The Summit is a balanced approach to your day: MEDIUM --> LARGE --> SMALL 
-        🏃🏼 Slow Burn is perfect for slow-starters to the day: SMALL --> MEDIUM --> LARGE 
-    Recommended way to use Imaya is to plan each day on the day itself @ the start of that day ++ to live presently Imaya clears the weekly log at the end of the week so that you always start on a fresh slate
+x (A) Desired app features @idea
 (A) Intended user flow would be at the start of the day, users are able to define their POOLS for that day @idea
 (A) Users are only able to specify their pools for that day, it has to be on the day itself to avoid overplanning and overambition and to avoid changing the past @idea
 (A) Keep a weekly/monthly log (AT MOST) that shows users what they achieved that month but no further, so that users aren't discouraged or riding momentum, to encourage being intentional about living in the present --> consider making this WEEKLY or YEARLY depending on feedback @idea
@@ -73,19 +47,18 @@
 (E) Be intentional about and add any and all relevant UNIT TESTS to allow for the application to be heavily unit tested before going out into production @test
 (E) See industry standards for CI/CD pipelines for android apps and implement and run them @test
 
-(F) Fill out the README.md with more details @admin
+x (F) Fill out the README.md with more details @admin
+x (F) Specify the references from the base of this todo.txt to the README as well @admin
+x (F) Can reference the flow state in the README.md @admin
+x (F) Add detailed usage instructions to the README.md @admin
 (F) Add mermaid diagrams of 1. ARCHITECTURE, 2. EXPECTED USER FLOW, 3. Any additional relevant diagrams that need to be added @admin
 (F) Specify the app is open-source but under protected license  @admin
 (F) Add additional legal disclaimers to absolve myself of any liability @admin
 (F) See whether I'm able to add automated badges to the README.md that update the CI/CD status of the application at all times @admin
 (F) Specify in the README.md how many days I took to deploy the app and include images of the date of my first commit and the date of my last commit @admin
-(F) Draw a nice app logo on ipad @admin
-(F) Draw a nice app logo for the repo @admin
-(F) Specify the references from the base of this todo.txt to the README as well @admin
+(F) Draw a nice app logo for the repo on ipad @admin
 (F) Remove todo.txt from the git commits and add it to .gitignore @admin
-(F) Can reference the flow state in the README.md @admin
 (F) Add this as a reference research article https://www.reddit.com/r/ProductivityApps/comments/1hs5e9a/upgrade_task_management_in_2025/ @idea
-(F) Add detailed usage instructions to the README.md @admin
 
 (G) Actually deploy the app to the Google Play Store via Google Play Console https://play.google.com/console before the 60 day deadline is up @deploy
 

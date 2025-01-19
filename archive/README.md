@@ -4,5 +4,5 @@ This is old code. View it [at your own risk](https://www.reddit.com/r/github/com
 
 | Version | Status | Source code |
 | :--- | :--- | :--- |
-| v0 | Deprecated | [`imaya_v0`](./imaya_v0/) |
-| v1.0.0 | [Imaya v1.0.0](https://github.com/gongahkia/imaya/releases/tag/1.0) | [`imaya_v1`](./imaya_v1/) |
+| v1.0.0 | [Imaya v1.0.0](https://github.com/gongahkia/imaya/releases/tag/1.0.0) | [`imaya_v1`](./imaya_v1/) |
+| v2.0.0 | In progress | |

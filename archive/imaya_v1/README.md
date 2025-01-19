@@ -1,4 +1,4 @@
-# Imaya v0
+# Imaya v1
 
 > [!WARNING]
 > Now deprecated.
