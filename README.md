@@ -4,12 +4,6 @@
 
 What will you do 今や?
 
-> TODO consider adding table of contents here
-
-## Status 
-
-![](./asset/logo/status.gif)
-
 ## Rationale
 
 > TODO add details here
@@ -58,3 +52,5 @@ What will you do 今や?
 The name `Imaya` (今や) is [Romaji](https://japanese.fandom.com/wiki/Romaji), often understood to mean "now" in [Kanji](https://japanese.fandom.com/wiki/Kanji). 
 
 However, 今や *(imaya)* differs from the more commonly used 今 *(ima)*. While 今 *(ima)* is generally used to refer to the current moment in various contexts, 今や *(imaya)* specifically highlights the contrast between the past and the present, emphasizing the significance of the here and now against the backdrop of transformation from a prior condition. 
+
+![](./asset/logo/status.gif)
