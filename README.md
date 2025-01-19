@@ -107,7 +107,7 @@ $ make
 
 ## FAQ
 
-### What other names were being considered aside from [Imaya](https://github.com/gongahkia/imaya)?
+### What other [names](#reference) were being considered aside from [Imaya](https://github.com/gongahkia/imaya)?
 
 * 水 *(mizu*) meaning water
 * 今 *(ima*) meaning now
