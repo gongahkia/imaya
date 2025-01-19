@@ -2,13 +2,13 @@
   
 # `Imaya`
 
-今や.
-
-![](./asset/logo/status.gif)
-
-What will you do today?
+What will you do 今や?
 
 > TODO consider adding table of contents here
+
+## Status 
+
+![](./asset/logo/status.gif)
 
 ## Rationale
 
