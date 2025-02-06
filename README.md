@@ -1,5 +1,4 @@
 [![](https://img.shields.io/badge/imaya_1.0.0-up-green)](https://github.com/gongahkia/imaya/releases/tag/1.0.0) 
-[![](https://img.shields.io/badge/imaya_2.0.0-build-orange)](https://github.com/gongahkia/imaya/releases/tag/2.0.0) 
   
 > [!IMPORTANT]  
 > Please read through [this disclaimer](#disclaimer) before using [Imaya](https://github.com/gongahkia/imaya).
