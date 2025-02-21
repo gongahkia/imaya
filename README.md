@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/imaya_1.0.0-up-green)](https://github.com/gongahkia/imaya/releases/tag/1.0.0) 
+[![](https://img.shields.io/badge/imaya_1.0.0-up-green)](https://github.com/gongahkia/imaya/releases/tag/1.0.0) [![](https://img.shields.io/badge/imaya_2.0.0-up-green)](https://github.com/gongahkia/imaya/releases/tag/2.0.0) 
   
 > [!IMPORTANT]  
 > Please read through [this disclaimer](#disclaimer) before using [Imaya](https://github.com/gongahkia/imaya).
@@ -90,19 +90,24 @@ Our favourite way to use Imaya *(and what we recommend you do)* is extract the 3
 
 ## Installation
 
-Current instructions involve spinning up a local server with `http-server`.
+Current instructions involve running `Imaya` locally.
 
 ```console
 $ git clone https://github.com/gongahkia/imaya
-$ cd src
-$ make
+$ cd src/imaya-app/
+$ npm install framer-motion lucide-react @radix-ui/react-select
+$ npm install clsx tailwind-merge
+$ npm install tailwindcss-animate
+$ npm run dev
 ```
+
+Then visit [`http://localhost:3000`](`http://localhost:3000`).
 
 ## Screenshot
 
-![](./asset/reference/v1/screenshot-1.png)
-![](./asset/reference/v1/screenshot-2.png)
-![](./asset/reference/v1/screenshot-3.png)
+![](./asset/reference/v2/screenshot-1.png)
+![](./asset/reference/v2/screenshot-2.png)
+![](./asset/reference/v2/screenshot-3.png)
 
 ## FAQ
 
