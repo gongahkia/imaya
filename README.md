@@ -21,6 +21,12 @@ With those considerations in mind, I created [Imaya](https://github.com/gongahki
 
 ![](./asset/logo/wolves.jpg)
 
+## Screenshot
+
+![](./asset/reference/v2/screenshot-1.png)
+![](./asset/reference/v2/screenshot-2.png)
+![](./asset/reference/v2/screenshot-3.png)
+
 ## Usage
 
 > [!TIP]  
@@ -102,12 +108,6 @@ $ npm run dev
 ```
 
 Then visit [`http://localhost:3000`](`http://localhost:3000`).
-
-## Screenshot
-
-![](./asset/reference/v2/screenshot-1.png)
-![](./asset/reference/v2/screenshot-2.png)
-![](./asset/reference/v2/screenshot-3.png)
 
 ## FAQ
 
