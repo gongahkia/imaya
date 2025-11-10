@@ -157,7 +157,11 @@ export default function TaskManager() {
   }
 
   return (
-    <div className="w-full max-w-6xl p-4 md:p-6 space-y-6">
+    <div className="w-full max-w-6xl p-4 md:p-6 space-y-6 relative">
+      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-50">
+        <ThemeToggle />
+      </div>
+
       <motion.div
         className="text-center mb-8 space-y-2"
         initial={{ opacity: 0, y: -50 }}
