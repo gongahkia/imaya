@@ -24,7 +24,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
 
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-full flex items-center justify-center">
         {showWelcome ? <Welcome onFinish={() => setShowWelcome(false)} /> : <TaskManager />}
       </div>
     </main>
