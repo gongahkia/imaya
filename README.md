@@ -24,7 +24,9 @@ With those considerations in mind, I created [Imaya](https://github.com/gongahki
 
 ## Screenshot
 
-Imaya has changed greatly over its past iterations. It currently looks like [this](#v3).
+Imaya has changed greatly over its past iterations.  
+
+It currently looks like [this](#v3).
 
 ### V1
 
@@ -116,11 +118,7 @@ Our favourite way to use Imaya *(and what we recommend you do)* is extract the 3
 Current instructions involve running `Imaya` locally.
 
 ```console
-$ git clone https://github.com/gongahkia/imaya
-$ cd src/imaya-app/
-$ npm install framer-motion lucide-react @radix-ui/react-select
-$ npm install clsx tailwind-merge
-$ npm install tailwindcss-animate
+$ git clone https://github.com/gongahkia/imaya && npm install
 $ npm run dev
 ```
 
