@@ -6,10 +6,14 @@ import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { PlusCircle, CheckCircle2, Clock, AlertCircle, Trash2, Edit2, X, Check, Sparkles } from "lucide-react"
+import { PlusCircle, CheckCircle2, Clock, AlertCircle, Trash2, Edit2, X, Check, Sparkles, HelpCircle } from "lucide-react"
 import { toast } from "sonner"
 import ConfettiExplosion from "react-confetti-explosion"
 import ThemeToggle from "./ThemeToggle"
+import Tutorial from "./Tutorial"
+import EmptyState from "./EmptyState"
+import DailyCeremony from "./DailyCeremony"
+import Philosophy from "./Philosophy"
 
 const MAX_TASKS = 9
 
@@ -30,11 +34,28 @@ export default function TaskManager() {
   const [editingTaskId, setEditingTaskId] = useState<string | null>(null)
   const [editingValue, setEditingValue] = useState("")
   const [confettiTaskId, setConfettiTaskId] = useState<string | null>(null)
+  const [showTutorial, setShowTutorial] = useState(false)
+  const [showCeremony, setShowCeremony] = useState(false)
+  const [showPhilosophy, setShowPhilosophy] = useState(false)
   const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks") || "[]")
     setTasks(storedTasks)
+
+    // Check if user has seen tutorial
+    const hasSeenTutorial = localStorage.getItem("hasSeenTutorial")
+    if (!hasSeenTutorial) {
+      setShowTutorial(true)
+    }
+
+    // Check if ceremony should be shown (once per day)
+    const lastCeremonyDate = localStorage.getItem("lastCeremonyDate")
+    const today = new Date().toLocaleDateString()
+    if (lastCeremonyDate !== today && storedTasks.length > 0 && hasSeenTutorial) {
+      // Delay ceremony to allow page to load
+      setTimeout(() => setShowCeremony(true), 1000)
+    }
   }, [])
 
   const saveTask = () => {
@@ -156,11 +177,54 @@ export default function TaskManager() {
     return gradientMap[taskType] || ""
   }
 
+  const completeTutorial = () => {
+    localStorage.setItem("hasSeenTutorial", "true")
+    setShowTutorial(false)
+  }
+
+  const openTutorial = () => {
+    setShowTutorial(true)
+  }
+
+  const handleCeremonyComplete = (selectedTasks: string[]) => {
+    const today = new Date().toLocaleDateString()
+    localStorage.setItem("lastCeremonyDate", today)
+    setShowCeremony(false)
+    if (selectedTasks.length > 0) {
+      toast.success(`${selectedTasks.length} tasks selected for today! 頑張って! (Ganbatte - Do your best!)`)
+    }
+  }
+
+  const handleCeremonySkip = () => {
+    const today = new Date().toLocaleDateString()
+    localStorage.setItem("lastCeremonyDate", today)
+    setShowCeremony(false)
+  }
+
   return (
-    <div className="w-full max-w-6xl p-4 md:p-6 space-y-6 relative">
-      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-50">
-        <ThemeToggle />
-      </div>
+    <>
+      {showTutorial && <Tutorial onComplete={completeTutorial} />}
+      {showCeremony && (
+        <DailyCeremony
+          tasks={tasks}
+          onComplete={handleCeremonyComplete}
+          onSkip={handleCeremonySkip}
+        />
+      )}
+      {showPhilosophy && <Philosophy onClose={() => setShowPhilosophy(false)} />}
+
+      <div className="w-full max-w-6xl p-4 md:p-6 space-y-6 relative">
+        <div className="absolute top-4 right-4 md:top-6 md:right-6 z-50 flex gap-2">
+          <Button
+            onClick={openTutorial}
+            variant="ghost"
+            size="icon"
+            className="relative w-12 h-12 rounded-full glass hover:scale-110 transition-transform"
+          >
+            <HelpCircle className="h-5 w-5 text-cyan-400" />
+          </Button>
+          <ThemeToggle />
+        </div>
 
       <motion.div
         className="text-center mb-8 space-y-2"
@@ -227,14 +291,17 @@ export default function TaskManager() {
         </div>
       </motion.div>
 
-      <AnimatePresence mode="popLayout">
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          {tasks.map((task, index) => (
+      {tasks.length === 0 ? (
+        <EmptyState />
+      ) : (
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            {tasks.map((task, index) => (
             <motion.div
               key={task.id}
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -339,9 +406,10 @@ export default function TaskManager() {
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
-        </motion.div>
-      </AnimatePresence>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      )}
 
       {tasks.length >= MAX_TASKS && (
         <motion.div
@@ -355,17 +423,31 @@ export default function TaskManager() {
         </motion.div>
       )}
 
-      <motion.div
-        className="text-center text-xs md:text-sm text-gray-500 mt-8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-      >
-        Made with ❤️ by{" "}
-        <a href="https://github.com/gongahkia" className="underline hover:text-white transition-colors">
-          @gongahkia
-        </a>
-      </motion.div>
-    </div>
+        <motion.div
+          className="text-center text-xs md:text-sm text-gray-500 mt-8 space-y-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <div>
+            <Button
+              onClick={() => setShowPhilosophy(true)}
+              variant="ghost"
+              size="sm"
+              className="text-blue-400 hover:text-blue-300"
+            >
+              <Sparkles className="mr-2 h-4 w-4" />
+              Learn the Philosophy
+            </Button>
+          </div>
+          <div>
+            Made with ❤️ by{" "}
+            <a href="https://github.com/gongahkia" className="underline hover:text-white transition-colors">
+              @gongahkia
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </>
   )
 }
