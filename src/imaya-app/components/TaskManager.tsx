@@ -1,13 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { PlusCircle, CheckCircle2, Clock, AlertCircle, Trash2, Edit2, X, Check } from "lucide-react"
+import { PlusCircle, CheckCircle2, Clock, AlertCircle, Trash2, Edit2, X, Check, Sparkles } from "lucide-react"
 import { toast } from "sonner"
+import ConfettiExplosion from "react-confetti-explosion"
+import ThemeToggle from "./ThemeToggle"
 
 const MAX_TASKS = 9
 
@@ -27,6 +29,8 @@ export default function TaskManager() {
   const [tasks, setTasks] = useState<TaskData[]>([])
   const [editingTaskId, setEditingTaskId] = useState<string | null>(null)
   const [editingValue, setEditingValue] = useState("")
+  const [confettiTaskId, setConfettiTaskId] = useState<string | null>(null)
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks") || "[]")
@@ -61,15 +65,19 @@ export default function TaskManager() {
   }
 
   const toggleTaskStatus = (id: string) => {
+    const task = tasks.find(t => t.id === id)
     const updatedTasks = tasks.map((task) =>
       task.id === id ? { ...task, status: task.status === "pending" ? "completed" : "pending" } : task,
     )
     setTasks(updatedTasks)
     localStorage.setItem("tasks", JSON.stringify(updatedTasks))
 
-    const task = tasks.find(t => t.id === id)
     if (task?.status === "pending") {
-      toast.success("Task completed! 🎉")
+      setConfettiTaskId(id)
+      setTimeout(() => setConfettiTaskId(null), 3000)
+      toast.success("Task completed! 🎉", {
+        description: "素晴らしい! (Subarashii! - Wonderful!)"
+      })
     }
   }
 
@@ -139,16 +147,40 @@ export default function TaskManager() {
     return emojiMap[taskType] || ""
   }
 
+  const getTaskGradient = (taskType: string) => {
+    const gradientMap: { [key: string]: string } = {
+      small: "gradient-stream animate-gradient",
+      medium: "gradient-river animate-gradient",
+      large: "gradient-ocean animate-gradient",
+    }
+    return gradientMap[taskType] || ""
+  }
+
   return (
     <div className="w-full max-w-6xl p-4 md:p-6 space-y-6">
-      <motion.h1
-        className="text-3xl md:text-4xl font-bold text-center mb-8 font-[family-name:var(--font-noto-sans-jp)]"
+      <motion.div
+        className="text-center mb-8 space-y-2"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.7, type: "spring", stiffness: 100 }}
       >
-        今や (Imaya)
-      </motion.h1>
+        <motion.h1
+          className="text-5xl md:text-6xl font-bold font-[family-name:var(--font-noto-sans-jp)] bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent shimmer"
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          今や
+        </motion.h1>
+        <motion.p
+          className="text-sm md:text-base text-gray-400 font-light tracking-wider"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          Focus on what truly matters
+        </motion.p>
+      </motion.div>
 
       <motion.div
         className="flex flex-col gap-3 md:gap-4"
@@ -203,15 +235,33 @@ export default function TaskManager() {
               key={task.id}
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.2 } }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
+              exit={{ opacity: 0, scale: 0.5, rotate: -10, transition: { duration: 0.3 } }}
+              transition={{
+                type: shouldReduceMotion ? "tween" : "spring",
+                stiffness: 260,
+                damping: 20,
+                delay: index * 0.05
+              }}
+              whileHover={{ scale: 1.03, y: -5 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Card
-                className={`overflow-hidden transition-all duration-300 hover:shadow-lg ${
+                className={`relative overflow-visible transition-all duration-500 hover:shadow-2xl shimmer ${
                   task.status === "completed" ? "opacity-60" : ""
-                } bg-gray-100 dark:bg-gray-800`}
+                } glass-card border-2`}
               >
-                <CardContent className="p-4">
+                <div className={`absolute inset-0 ${getTaskGradient(task.taskType)} opacity-10 rounded-lg`}></div>
+                {confettiTaskId === task.id && !shouldReduceMotion && (
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+                    <ConfettiExplosion
+                      force={0.6}
+                      duration={2500}
+                      particleCount={50}
+                      width={800}
+                    />
+                  </div>
+                )}
+                <CardContent className="p-4 relative z-10">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-xs text-gray-600 dark:text-gray-400">{task.date}</span>
                     <div className="flex gap-1 items-center">
