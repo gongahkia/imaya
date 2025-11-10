@@ -1,4 +1,5 @@
 [![](https://img.shields.io/badge/imaya_1.0.0-up-dark_green)](https://github.com/gongahkia/imaya/releases/tag/1.0.0) [![](https://img.shields.io/badge/imaya_2.0.0-up-green)](https://github.com/gongahkia/imaya/releases/tag/2.0.0) 
+[![](https://img.shields.io/badge/imaya_3.0.0-up-dark_green)](https://github.com/gongahkia/imaya/releases/tag/3.0.0) 
   
 > [!IMPORTANT]  
 > Please read through [this disclaimer](#disclaimer) before using [Imaya](https://github.com/gongahkia/imaya).
@@ -23,9 +24,25 @@ With those considerations in mind, I created [Imaya](https://github.com/gongahki
 
 ## Screenshot
 
+Imaya has changed greatly over its past iterations. It currently looks like [this](#v3).
+
+### V1
+
+![](./asset/reference/v1/screenshot-1.png)
+![](./asset/reference/v1/screenshot-2.png)
+![](./asset/reference/v1/screenshot-3.png)
+
+### V2
+
 ![](./asset/reference/v2/screenshot-1.png)
 ![](./asset/reference/v2/screenshot-2.png)
 ![](./asset/reference/v2/screenshot-3.png)
+
+### V3
+
+![](./asset/reference/v3/screenshot-1.png)
+![](./asset/reference/v3/screenshot-2.png)
+![](./asset/reference/v3/screenshot-3.png)
 
 ## Usage
 
