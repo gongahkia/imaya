@@ -14,6 +14,7 @@ import Tutorial from "./Tutorial"
 import EmptyState from "./EmptyState"
 import DailyCeremony from "./DailyCeremony"
 import Philosophy from "./Philosophy"
+import FocusMode from "./FocusMode"
 
 const MAX_TASKS = 9
 
@@ -37,7 +38,24 @@ export default function TaskManager() {
   const [showTutorial, setShowTutorial] = useState(false)
   const [showCeremony, setShowCeremony] = useState(false)
   const [showPhilosophy, setShowPhilosophy] = useState(false)
+  const [showFocusMode, setShowFocusMode] = useState(false)
   const shouldReduceMotion = useReducedMotion()
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === "f" && e.ctrlKey) {
+        e.preventDefault()
+        setShowFocusMode((prev) => !prev)
+      }
+      if (e.key === "Escape") {
+        setShowFocusMode(false)
+        setShowPhilosophy(false)
+      }
+    }
+    window.addEventListener("keydown", handleKeyPress)
+    return () => window.removeEventListener("keydown", handleKeyPress)
+  }, [])
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks") || "[]")
@@ -212,14 +230,33 @@ export default function TaskManager() {
         />
       )}
       {showPhilosophy && <Philosophy onClose={() => setShowPhilosophy(false)} />}
+      {showFocusMode && (
+        <FocusMode
+          tasks={tasks}
+          onClose={() => setShowFocusMode(false)}
+          onToggleStatus={toggleTaskStatus}
+        />
+      )}
 
       <div className="w-full max-w-6xl p-4 md:p-6 space-y-6 relative">
         <div className="absolute top-4 right-4 md:top-6 md:right-6 z-50 flex gap-2">
+          <Button
+            onClick={() => setShowFocusMode(true)}
+            variant="ghost"
+            size="icon"
+            className="relative w-12 h-12 rounded-full glass hover:scale-110 transition-transform"
+            aria-label="Enter Focus Mode (Ctrl+F)"
+            title="Focus Mode (Ctrl+F)"
+          >
+            <Sparkles className="h-5 w-5 text-purple-400" />
+          </Button>
           <Button
             onClick={openTutorial}
             variant="ghost"
             size="icon"
             className="relative w-12 h-12 rounded-full glass hover:scale-110 transition-transform"
+            aria-label="Show Tutorial"
+            title="Tutorial"
           >
             <HelpCircle className="h-5 w-5 text-cyan-400" />
           </Button>
