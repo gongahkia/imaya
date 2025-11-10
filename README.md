@@ -1,5 +1,6 @@
-[![](https://img.shields.io/badge/imaya_1.0.0-up-dark_green)](https://github.com/gongahkia/imaya/releases/tag/1.0.0) [![](https://img.shields.io/badge/imaya_2.0.0-up-green)](https://github.com/gongahkia/imaya/releases/tag/2.0.0) 
-[![](https://img.shields.io/badge/imaya_3.0.0-up-dark_green)](https://github.com/gongahkia/imaya/releases/tag/3.0.0) 
+[![](https://img.shields.io/badge/imaya_1.0.0-passing-%23006400)](https://github.com/gongahkia/imaya/releases/tag/1.0.0) 
+[![](https://img.shields.io/badge/imaya_2.0.0-passing-%23228B22)](https://github.com/gongahkia/imaya/releases/tag/2.0.0) 
+[![](https://img.shields.io/badge/imaya_3.0.0-passing-%2390EE90)](https://github.com/gongahkia/imaya/releases/tag/3.0.0) 
   
 > [!IMPORTANT]  
 > Please read through [this disclaimer](#disclaimer) before using [Imaya](https://github.com/gongahkia/imaya).
